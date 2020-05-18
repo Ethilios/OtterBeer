@@ -1,40 +1,57 @@
 <template>
   <div id="app">
-    <page-header></page-header>
-    <hero :heading="home_heading"></hero>
+    <div class="top-section">
+        <div class="main-heading">
+            <h1>Otter Beer</h1>
+        </div>
+        <nav class="main-navbar">
+          <router-link to="/">Home</router-link>
+          <router-link to="/about">Light</router-link>
+          <router-link to="/Medium">Medium</router-link>
+          <router-link to="/Dark">Dark</router-link>
+        </nav>
+    </div>
+    <router-view/>
   </div>
 </template>
 
-<script>
-import PageHeader from './components/PageHeader.vue'
-import Hero from './components/Hero.vue'
-
-var bg_colour = process.env.VUE_APP_PALE_BLUE;
-
-export default {
-  name: 'App',
-  components: {
-    PageHeader,
-    Hero
-  },
-  data() {
-    return {
-      home_heading: "Featured Favourites",
-      bg_colour: bg_colour
-    };
-  },
-}
-</script>
-
-<style>
-
-@import url("https://fonts.googleapis.com/css2?family=Jost:wght@500&display=swap");
+<style scoped>
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@500&display=swap');
 
 #app {
   font-family: Jost, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  background-color: #CDF4FF;
+}
+
+h1 {
+  font-weight: 400;
+}
+
+.main-heading {
+  margin-left: 5%;
+  width: 55%;
+  float: left;
+  position: relative;
+}
+
+.main-navbar {
+  font-size: 1.2em;
+  margin-left: 60%;
+  display: inline;
+}
+
+a {
+  float: left;
+  margin-left: 2%;
+  text-decoration: none;
+  color: black;
+}
+
+a:hover {
+  color: blueviolet;
+}
+
+a.router-link-exact-active{
+    text-decoration: underline;
 }
 
 </style>

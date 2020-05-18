@@ -1,3 +1,12 @@
+
+
+
+
+// Not in Use
+
+
+
+
 <template>
     <div class="top-section">
         <div class="main-heading">
@@ -5,10 +14,10 @@
         </div>
         <nav class="main-navbar">
             <ul>
-                <li><a class="active" href="#home">Home</a></li>
-                <li><a href="./light.html">Light</a></li>
-                <li><a href="./medium.html">Medium</a></li>
-                <li><a href="./dark.html">Dark</a></li>
+                <li><router-link to="/">Home</router-link></li>
+                <li><router-link to="../views/about">Light</router-link></li>
+                <li><router-link to="/Medium">Medium</router-link></li>
+                <li><router-link to="/Dark">Dark</router-link></li>
             </ul>
         </nav>
     </div>
@@ -17,13 +26,15 @@
 <script>
 export default {
     name: 'PageHeader',
-    props: {
-        
-    }
 }
 </script>
 
 <style scoped>
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@500&display=swap');
+
+.top-section {
+  font-family: Jost, sans-serif;
+}
 
     h1 {
     font-weight: 400;
