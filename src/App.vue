@@ -15,7 +15,7 @@
   </div>
 </template>
 
-<style scoped>
+<style>
 @import url('https://fonts.googleapis.com/css2?family=Jost:wght@500&display=swap');
 
 #app {
@@ -39,18 +39,18 @@ h1 {
   display: inline;
 }
 
-a {
+nav a {
   float: left;
   margin-left: 2%;
   text-decoration: none;
   color: black;
 }
 
-a:hover {
+nav a:hover {
   color: blueviolet;
 }
 
-a.router-link-exact-active{
+nav a.router-link-exact-active{
     text-decoration: underline;
 }
 
