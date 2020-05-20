@@ -18,6 +18,21 @@
   margin: 5%;
 }
 
+@media only screen and (max-width: 775px) {
+  /* Smaller window - remove a column */
+  .gallery {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media only screen and (min-width: 1400px) {
+  /* Bigger window - add a column */
+  .gallery {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+
+
 </style>
 
 <script>
