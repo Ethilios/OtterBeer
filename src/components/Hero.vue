@@ -26,8 +26,9 @@ export default {
 
 .hero-text {
     position: absolute;
-    top: 65%;
+    top: 70%;
     left: 50%;
     transform: translate(-50%, -50%);
+    font-size: 2vw;
 }
 </style>
