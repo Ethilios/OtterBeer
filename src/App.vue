@@ -6,7 +6,7 @@
         </div>
         <nav class="main-navbar">
           <router-link to="/">Home</router-link>
-          <router-link to="/about">Light</router-link>
+          <router-link to="/Light">Light</router-link>
           <router-link to="/Medium">Medium</router-link>
           <router-link to="/Dark">Dark</router-link>
         </nav>

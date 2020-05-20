@@ -1,6 +1,6 @@
 <template>
   <div id="home-page">
-    <Hero :heading="Testing"></Hero>
+    <Hero heading="Featured Favourites"></Hero>
   </div>
 </template>
 
@@ -11,9 +11,10 @@ export default {
   name: 'Home',
   components: {
     Hero
-  },
+  }
 }
 </script>
+
 
 
 
