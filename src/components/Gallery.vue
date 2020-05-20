@@ -10,11 +10,12 @@
   grid-template-columns: repeat(4, 1fr);
   grid-auto-rows: minmax(50px, auto);
   float: left;
-  margin: 5% 5%;
+  margin: 3%;
 }
 
 .gallery .gallery { /* Prevents Recursively creating grid layout */
   display: block;
+  margin: 5%;
 }
 
 </style>

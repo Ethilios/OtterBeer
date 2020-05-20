@@ -5,7 +5,7 @@
             <div class="item-overlay">
                 <div class="overlay-text">
                     <div class="heading">{{title}}</div>
-                    <div class="text">{{source}}</div>
+                    <div class="text"></div>
                 </div>
             </div>
         </div>
@@ -28,10 +28,14 @@ export default {
 
 <style>
 
+.item-container {
+    position: relative;
+}
+
 .item-container img {
-    max-width: 100%;
-    max-height: 100%;
     display: block;
+    width: 100%;
+    height: auto;
 }
 
 .item-overlay {
@@ -40,12 +44,11 @@ export default {
     bottom: 0;
     left: 0;
     right: 0;
-    height: 20%;
-    width: 20%;
+    height: 100%;
+    width: 100%;
     opacity: 0;
     transition: .5s ease;
     background-color: black;
-    margin: 10%;
 }
 
 .item-container:hover .item-overlay {
