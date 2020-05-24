@@ -11,6 +11,7 @@
   grid-auto-rows: minmax(50px, auto);
   float: left;
   margin-top: 5%;
+  margin-bottom: 10%;
   padding: 0 5%;
 }
 

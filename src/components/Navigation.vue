@@ -50,7 +50,7 @@ h1 {
 }
 
 .main-navbar a:hover {
-  color: rgb(109, 9, 202);
+  color: darkviolet;
 }
 
 .main-navbar a.router-link-exact-active{

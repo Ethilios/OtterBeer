@@ -22,4 +22,7 @@ export default {
 #app {
   font-family: Jost, sans-serif;
 }
+
+
+
 </style>
