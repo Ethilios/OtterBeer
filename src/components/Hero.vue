@@ -31,4 +31,5 @@ export default {
     transform: translate(-50%, -50%);
     font-size: 2vw;
 }
+
 </style>
