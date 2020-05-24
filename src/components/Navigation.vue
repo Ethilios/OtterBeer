@@ -43,18 +43,17 @@ h1 {
   padding-top: 6%;
 }
 
-a.routerlink {
-  float: left;
-  margin-left: 4%;
-  text-decoration: none;
-  color: black;
+.main-navbar a{
+    color: black;
+    text-decoration: none;
+    margin-left: 4%;
 }
 
-a.routerlink:hover {
+.main-navbar a:hover {
   color: rgb(109, 9, 202);
 }
 
-nav a.router-link-exact-active{
+.main-navbar a.router-link-exact-active{
     text-decoration: underline;
 }
 </style>
