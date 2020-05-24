@@ -36,6 +36,7 @@ export default {
     display: block;
     width: 100%;
     height: auto;
+    border-radius: 10px;
 }
 
 .item-overlay {
@@ -46,6 +47,7 @@ export default {
     right: 0;
     height: 100%;
     width: 100%;
+    border-radius: 10px;
     opacity: 0;
     transition: .5s ease;
     background-color: darkslateblue;

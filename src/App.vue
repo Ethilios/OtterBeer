@@ -24,6 +24,7 @@ export default {
 #app {
   font-family: Jost, sans-serif;
   position: absolute;
+  width: inherit;
 }
 
 .router-anim-leave-active {

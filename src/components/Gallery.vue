@@ -10,9 +10,9 @@
   grid-template-columns: repeat(4, 1fr);
   grid-auto-rows: minmax(50px, auto);
   float: left;
-  margin-top: 5%;
-  margin-bottom: 10%;
+  margin: 5% 10% 10% 10%;
   padding: 0 5%;
+  width: inherit;
 }
 
 .gallery .gallery { /* Prevents Recursively creating grid layout */
