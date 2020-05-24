@@ -10,18 +10,26 @@
   grid-template-columns: repeat(4, 1fr);
   grid-auto-rows: minmax(50px, auto);
   float: left;
-  margin: 3%;
+  margin-top: 5%;
+  padding: 0 5%;
 }
 
 .gallery .gallery { /* Prevents Recursively creating grid layout */
   display: block;
-  margin: 5%;
+  margin: 4% 2%;
 }
 
-@media only screen and (max-width: 775px) {
+@media only screen and (max-width: 875px) {
   /* Smaller window - remove a column */
   .gallery {
     grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media only screen and (min-width: 1200px) { 
+  /* Improves layour of gallery on larger/full screen*/
+  .gallery {
+    padding: 0 7%;
   }
 }
 

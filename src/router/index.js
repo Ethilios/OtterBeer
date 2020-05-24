@@ -1,38 +1,38 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import Home from '@/views/Home.vue'
+import home from '@/views/home.vue'
 
 Vue.use(VueRouter)
 
   const routes = [
   {
     path: '/',
-    name: 'Home',
-    component: Home
+    name: 'home',
+    component: home
   },
   {
-    path: '/Light',
-    name: 'Light',
+    path: '/light',
+    name: 'light',
     // route level code-splitting
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "Light" */ '@/views/Light.vue')
+    component: () => import(/* webpackChunkName: "Light" */ '@/views/light.vue')
   },
   {
-    path: '/Medium',
-    name: 'Medium',
+    path: '/medium',
+    name: 'medium',
     // route level code-splitting
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "Medium" */ '@/views/Medium.vue')
+    component: () => import(/* webpackChunkName: "Medium" */ '@/views/medium.vue')
   },
   {
-    path: '/Dark',
-    name: 'Dark',
+    path: '/dark',
+    name: 'dark',
     // route level code-splitting
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "Dark" */ '@/views/Dark.vue')
+    component: () => import(/* webpackChunkName: "Dark" */ '@/views/dark.vue')
   },
 ]
 
