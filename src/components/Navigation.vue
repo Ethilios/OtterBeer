@@ -44,9 +44,9 @@ h1 {
 }
 
 .main-navbar a{
-    color: black;
     text-decoration: none;
     margin-left: 4%;
+    color: darkslateblue;
 }
 
 .main-navbar a:hover {

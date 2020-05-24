@@ -48,7 +48,7 @@ export default {
     width: 100%;
     opacity: 0;
     transition: .5s ease;
-    background-color: black;
+    background-color: darkslateblue;
 }
 
 .item-container:hover .item-overlay {
