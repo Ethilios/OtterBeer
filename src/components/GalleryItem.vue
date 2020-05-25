@@ -1,11 +1,11 @@
 <template>
     <div class="gallery">
         <div class="item-container">
-            <img src='@/assets/item-placeholder.jpg' alt="beer image">
+            <img :src="defaultImage" alt="beer image">
             <div class="item-overlay">
                 <div class="overlay-text">
-                    <div class="heading">{{title}}</div>
-                    <div class="text"></div>
+                    <div class="heading">{{cosmicObj.name}}</div>
+                    <div class="text">{{cosmicObj.brewery}}</div>
                 </div>
             </div>
         </div>
@@ -16,12 +16,24 @@
 export default {
     name: 'GalleryItem',
     components: {
-
     },
     props: {
-        title: String,
-        source: String,
-        text: String,
+        cosmicObj: {
+            required: true,
+            type: Object
+        }
+    },
+    data() {
+        return {}
+    },
+    computed: {
+        defaultImage() {
+            let defaultImage
+            this.cosmicObj.metafields.map((field) => {
+                if (field.title === 'image') return defaultImage = field.url
+            })
+            return defaultImage
+        },
     }
 }
 </script>

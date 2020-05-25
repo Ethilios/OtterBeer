@@ -1,6 +1,11 @@
 <template>
   <div class="gallery">
-      <GalleryItem v-for="item in items" :key="item.id" :title="item.title" :source="item.source" :text="item.text"></GalleryItem>
+      <GalleryItem 
+        v-for="(obj, index) in cosmicAssetObjs.slice(0,2)" 
+        :key="index"
+        :cosmicObj="obj"
+        >
+      </GalleryItem>
   </div>
 </template>
 
@@ -51,81 +56,27 @@ export default {
     },
     data() {
       return {
-        items: [
-          { 
-            id: '001',
-            title: 'Title One',
-            source: '@/assets/item-placeholder.jpg',
-            text: 'This is the text'
-          },
-          { 
-            id: '002',
-            title: 'Title Two',
-            source: '@/assets/item-placeholder.jpg',
-            text: 'This is the text'
-          },
-          { 
-            id: '003',
-            title: 'Title Three',
-            source: '@/assets/item-placeholder.jpg',
-            text: 'This is the text'
-          },
-          { 
-            id: '004',
-            title: 'Title Four',
-            source: '@/assets/item-placeholder.jpg',
-            text: 'This is the text'
-          },
-          { 
-            id: '005',
-            title: 'Title Five',
-            source: '@/assets/item-placeholder.jpg',
-            text: 'This is the text'
-          },
-          { 
-            id: '006',
-            title: 'Title Six',
-            source: '@/assets/item-placeholder.jpg',
-            text: 'This is the text'
-          },
-          { 
-            id: '007',
-            title: 'Title Seven',
-            source: '@/assets/item-placeholder.jpg',
-            text: 'This is the text'
-          },
-          { 
-            id: '008',
-            title: 'Title Eight',
-            source: '@/assets/item-placeholder.jpg',
-            text: 'This is the text'
-          },
-          { 
-            id: '009',
-            title: 'Title Nine',
-            source: '@/assets/item-placeholder.jpg',
-            text: 'This is the text'
-          },
-          { 
-            id: '010',
-            title: 'Title Ten',
-            source: '@/assets/item-placeholder.jpg',
-            text: 'This is the text'
-          },
-          { 
-            id: '011',
-            title: 'Title Eleven',
-            source: '@/assets/item-placeholder.jpg',
-            text: 'This is the text'
-          },
-          { 
-            id: '012',
-            title: 'Title Twelve',
-            source: '@/assets/item-placeholder.jpg',
-            text: 'This is the text'
-          }
-        ]
-      };
+        cosmicAssetObjs: [],
+      }
+    },
+    mounted() {
+      // Instantiate Cosmic
+      const Cosmic = require('cosmicjs')()
+      // Instantiate the Otter Beer bucket
+      const bucket = Cosmic.bucket({
+        slug: 'otter-beer',
+        read_key: 'LDZg20C3CyfC5YuOWlhci9bnS3JWp2ujxlRJLewPkXN7Tw3LBE'
+      })
+
+      bucket.getBucket().then(data => {
+        console.log(data)
+        data.bucket.objects.map((object) => {
+          this.cosmicAssetObjs.push(object)
+        }).catch(err => {
+          console.log('Error getting bucket data: ', err)
+        })
+      })
     }
 }
 </script>
+
