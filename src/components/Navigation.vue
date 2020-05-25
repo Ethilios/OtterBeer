@@ -4,10 +4,10 @@
             <h1>Otter Beer</h1>
         </div>
         <nav class="main-navbar">
-            <router-link class="routerlink" to="/">Home</router-link>
-            <router-link class="routerlink" to="/light">Light</router-link>
-            <router-link class="routerlink" to="/medium">Medium</router-link>
-            <router-link class="routerlink" to="/dark">Dark</router-link>
+            <router-link id="left-most" to="/">Home</router-link>
+            <router-link to="/light">Light</router-link>
+            <router-link to="/medium">Medium</router-link>
+            <router-link to="/dark">Dark</router-link>
         </nav>
     </div>
 </template>
@@ -23,29 +23,30 @@ h1 {
   font-weight: 400;
 }
 
-.main-heading {
-  margin-left: 5%;
-  float: left;
-  position: relative;
-  font-size: 2.5vw;
+.top-section {
+  display: flex;
 }
 
-@media only screen and (min-width: 1000px) {
-  .main-heading {
-    font-size: 2vw;
-  }
+.main-heading {
+  margin-left: 5%;
+  margin-right: 24%;
+  float: inline-start;
+  font-size: calc(14px + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
 }
 
 .main-navbar {
-  font-size: 1.2em;
-  float: inline-end;
-  padding-left: 60%;
-  padding-top: 6%;
+  margin-left: 15vw;
+  margin-top: 4%;
+  font-size: calc(14px + (23 - 10) * ((100vw - 300px) / (1600 - 300)));
+}
+
+#left-most {
+  margin-left: 0%;
 }
 
 .main-navbar a{
     text-decoration: none;
-    margin-left: 4%;
+    margin-left: 12%;
     color: darkslateblue;
 }
 

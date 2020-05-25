@@ -10,9 +10,8 @@
   grid-template-columns: repeat(4, 1fr);
   grid-auto-rows: minmax(50px, auto);
   float: left;
-  margin: 5% 10% 10% 10%;
-  padding: 0 5%;
-  width: inherit;
+  margin: 5% 7% 10% 9%;
+  width: 85%;
 }
 
 .gallery .gallery { /* Prevents Recursively creating grid layout */
@@ -29,9 +28,7 @@
 
 @media only screen and (min-width: 1200px) { 
   /* Improves layour of gallery on larger/full screen*/
-  .gallery {
-    padding: 0 7%;
-  }
+
 }
 
 @media only screen and (min-width: 1400px) {

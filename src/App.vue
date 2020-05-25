@@ -28,7 +28,7 @@ export default {
 }
 
 .router-anim-leave-active {
-    animation: leaving 1s;
+    animation: leaving .5s;
 }
 @keyframes leaving {
   from {
@@ -42,12 +42,12 @@ export default {
 
 .router-anim-enter-active {
     animation: entering 1s;
-    animation-duration: 3s;
-    opacity: 0;
+    animation-duration: 2.5s;
 }
 @keyframes entering {
   from {
     transform: translateX(-50px);
+    opacity: 0;
   }
   to {
     transform: translateX(0);

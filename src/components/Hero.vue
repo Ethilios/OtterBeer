@@ -26,10 +26,10 @@ export default {
 
 .hero-text {
     position: absolute;
-    top: 70%;
+    top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    font-size: 2vw;
+    font-size: calc(14px + (23 - 10) * ((100vw - 300px) / (1600 - 300)));
 }
 
 </style>
