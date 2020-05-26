@@ -5,11 +5,10 @@
             <div class="item-overlay">
                 <div class="overlay-text">
                     <div class="heading">{{this.name}}</div>
-                    <div class="text">{{this.description}}</div>
+                    <div class="text">{{this.brewery}}</div>
                 </div>
             </div>
         </div>
-        
     </div>
 </template>
 
@@ -20,10 +19,6 @@ export default {
     },
     props: {
         cosmicObj: {
-            required: true,
-            type: Object
-        },
-        cosmicBucket: {
             required: true,
             type: Object
         }
@@ -111,6 +106,10 @@ export default {
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   text-align: center;
+}
+
+.overlay-text .text {
+    color: darkviolet;
 }
 
 </style>

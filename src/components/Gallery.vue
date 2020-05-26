@@ -1,10 +1,9 @@
 <template>
   <div class="gallery">
       <GalleryItem 
-        v-for="(obj, index) in cosmicAssetObjs.slice(0,2)" 
+        v-for="(obj, index) in cosmicAssetObjs" 
         :key="index"
         :cosmicObj="obj"
-        :cosmicBucket="bucket"
         >
       </GalleryItem>
   </div>
