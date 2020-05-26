@@ -1,14 +1,15 @@
 <template>
     <div class="gallery">
         <div class="item-container">
-            <img :src="defaultImage" alt="beer image">
+            <img :src="this.defaultImage" alt="beer image">
             <div class="item-overlay">
                 <div class="overlay-text">
-                    <div class="heading">{{cosmicObj.name}}</div>
-                    <div class="text">{{cosmicObj.brewery}}</div>
+                    <div class="heading">{{this.name}}</div>
+                    <div class="text">{{this.description}}</div>
                 </div>
             </div>
         </div>
+        
     </div>
 </template>
 
@@ -21,6 +22,10 @@ export default {
         cosmicObj: {
             required: true,
             type: Object
+        },
+        cosmicBucket: {
+            required: true,
+            type: Object
         }
     },
     data() {
@@ -30,10 +35,37 @@ export default {
         defaultImage() {
             let defaultImage
             this.cosmicObj.metafields.map((field) => {
-                if (field.title === 'image') return defaultImage = field.url
+                if (field.title === 'Image') return defaultImage = field.url
             })
             return defaultImage
         },
+        description() {
+            let description
+            this.cosmicObj.metafields.map((field) => {
+                if (field.title === 'Description') return description = field.value
+            })
+            return description
+        },
+        name() {
+            let name
+            this.cosmicObj.metafields.map((field) => {
+                if (field.title === 'Name') return name = field.value
+            })
+            return name
+        },
+        brewery() {
+            let brewery
+            this.cosmicObj.metafields.map((field) => {
+                if (field.title === 'Brewery') return brewery = field.value
+            })
+            return brewery
+        }
+    },
+    mounted() {
+        console.log("Name:",
+                    "Image:",
+                    "Brewery:",
+                    "Description:",)
     }
 }
 </script>

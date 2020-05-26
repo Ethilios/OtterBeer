@@ -4,6 +4,7 @@
         v-for="(obj, index) in cosmicAssetObjs.slice(0,2)" 
         :key="index"
         :cosmicObj="obj"
+        :cosmicBucket="bucket"
         >
       </GalleryItem>
   </div>
@@ -72,11 +73,8 @@ export default {
         console.log(data)
         data.bucket.objects.map((object) => {
           this.cosmicAssetObjs.push(object)
-        }).catch(err => {
-          console.log('Error getting bucket data: ', err)
         })
       })
     }
 }
 </script>
-
