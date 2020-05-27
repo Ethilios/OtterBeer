@@ -74,7 +74,7 @@ export default {
 .item-container img {
     display: block;
     width: 100%;
-    height: auto;
+    height: 300px;
     border-radius: 10px;
 }
 
@@ -109,7 +109,7 @@ export default {
 }
 
 .overlay-text .text {
-    color: darkviolet;
+    color: rgb(211, 77, 0);
 }
 
 </style>

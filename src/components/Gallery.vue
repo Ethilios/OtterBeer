@@ -21,7 +21,6 @@
 
 .gallery .gallery { /* Prevents Recursively creating grid layout */
   display: block;
-  margin: 4% 2%;
 }
 
 @media only screen and (max-width: 875px) {
